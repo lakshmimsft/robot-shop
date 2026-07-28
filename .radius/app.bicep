@@ -7,6 +7,8 @@ param registryUsername string
 @secure()
 param registryPassword string
 
+param image string = ''
+
 resource robotShopApp 'Radius.Core/applications@2025-08-01-preview' = {
   name: 'robot-shop'
   properties: {
