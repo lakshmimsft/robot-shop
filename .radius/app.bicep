@@ -14,16 +14,6 @@ resource robotShopApp 'Radius.Core/applications@2025-08-01-preview' = {
   }
 }
 
-resource redisCache 'Radius.Data/redisCaches@2025-08-01-preview' = {
-  name: 'redis'
-  properties: {
-    environment: environment
-    application: robotShopApp.id
-    size: 'S'
-    codeReference: 'cart/server.js#L390'
-  }
-}
-
 resource registryCreds 'Radius.Security/secrets@2025-08-01-preview' = {
   name: 'radius-ghcr-registry-creds'
   properties: {
@@ -258,6 +248,25 @@ resource mysqlContainer 'Radius.Compute/containers@2025-08-01-preview' = {
   }
 }
 
+resource redisContainer 'Radius.Compute/containers@2025-08-01-preview' = {
+  name: 'redis'
+  properties: {
+    environment: environment
+    application: robotShopApp.id
+    codeReference: 'cart/server.js#L390'
+    containers: {
+      redis: {
+        image: 'redis:6.2-alpine'
+        ports: {
+          redis: {
+            containerPort: 6379
+          }
+        }
+      }
+    }
+  }
+}
+
 resource rabbitmqContainer 'Radius.Compute/containers@2025-08-01-preview' = {
   name: 'rabbitmq'
   properties: {
@@ -329,7 +338,7 @@ resource userContainer 'Radius.Compute/containers@2025-08-01-preview' = {
             value: 'mongodb://mongodb-mongodb:27017/users'
           }
           REDIS_HOST: {
-            value: redisCache.properties.host
+            value: 'redis-redis'
           }
           USER_SERVER_PORT: {
             value: '8080'
@@ -340,6 +349,7 @@ resource userContainer 'Radius.Compute/containers@2025-08-01-preview' = {
   }
   dependsOn: [
     mongodbContainer
+    redisContainer
   ]
 }
 
@@ -359,7 +369,7 @@ resource cartContainer 'Radius.Compute/containers@2025-08-01-preview' = {
         }
         env: {
           REDIS_HOST: {
-            value: redisCache.properties.host
+            value: 'redis-redis'
           }
           CATALOGUE_HOST: {
             value: 'catalogue-catalogue'
@@ -373,6 +383,7 @@ resource cartContainer 'Radius.Compute/containers@2025-08-01-preview' = {
   }
   dependsOn: [
     catalogueContainer
+    redisContainer
   ]
 }
 
