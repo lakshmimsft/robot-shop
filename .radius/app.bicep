@@ -39,7 +39,7 @@ resource mongodbImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'mongo/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//mongo?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//mongo?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -57,7 +57,7 @@ resource mysqlImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'mysql/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//mysql?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//mysql?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -75,7 +75,7 @@ resource catalogueImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'catalogue/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//catalogue?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//catalogue?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -93,7 +93,7 @@ resource userImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'user/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//user?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//user?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -111,7 +111,7 @@ resource cartImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'cart/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//cart?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//cart?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -129,7 +129,7 @@ resource shippingImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'shipping/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//shipping?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//shipping?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -147,7 +147,7 @@ resource ratingsImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'ratings/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//ratings?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//ratings?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -165,7 +165,7 @@ resource paymentImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'payment/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//payment?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//payment?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -183,7 +183,7 @@ resource dispatchImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'dispatch/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//dispatch?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//dispatch?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
@@ -201,7 +201,7 @@ resource webImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'web/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//web?ref=55292e2199f2fb00a165b1f7d3045fe7f8922038'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//web?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
       platforms: [
         'linux/amd64'
       ]
