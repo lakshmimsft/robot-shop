@@ -129,7 +129,7 @@ resource shippingImage 'Radius.Compute/containerImages@2025-08-01-preview' = {
     application: robotShopApp.id
     codeReference: 'shipping/Dockerfile'
     build: {
-      source: 'git::https://github.com/lakshmimsft/robot-shop.git//shipping?ref=804eb8a0d261bdb5cea59897ea542e7f667442d1'
+      source: 'git::https://github.com/lakshmimsft/robot-shop.git//shipping?ref=32a12b91e3d2a3b3216aa0a369b1ce694740cd7a'
       platforms: [
         'linux/amd64'
       ]
